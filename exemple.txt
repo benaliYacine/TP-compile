@@ -1,1 +1,6 @@
-x=5;
+CODE HelloACAD
+INTEGER x; 
+REAL y;
+START
+
+END.
