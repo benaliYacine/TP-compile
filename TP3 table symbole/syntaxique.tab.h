@@ -39,17 +39,32 @@
    /* Put the tokens into the symbol table, so that GDB and other debuggers
       know about them.  */
    enum yytokentype {
-     idf = 258,
-     cst = 259,
-     aff = 260,
-     pvg = 261,
-     mc_code = 262,
-     mc_h = 263,
-     mc_int = 264,
-     mc_real = 265,
-     mc_start = 266,
-     mc_end = 267,
-     err = 268
+     mc_pgm = 258,
+     mc_entier = 259,
+     mc_reel = 260,
+     addition = 261,
+     mc_char = 262,
+     mc_str = 263,
+     mc_process = 264,
+     mc_loop = 265,
+     mc_array = 266,
+     err = 267,
+     mc_var = 268,
+     eg = 269,
+     mc_const = 270,
+     idf = 271,
+     cst = 272,
+     dz = 273,
+     dpts = 274,
+     aff = 275,
+     division = 276,
+     mult = 277,
+     acco = 278,
+     accf = 279,
+     crov = 280,
+     crfm = 281,
+     fin = 282,
+     sep = 283
    };
 #endif
 
@@ -69,7 +84,7 @@ typedef union YYSTYPE
 
 
 /* Line 1676 of yacc.c  */
-#line 73 "syntaxique.tab.h"
+#line 88 "syntaxique.tab.h"
 } YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */
