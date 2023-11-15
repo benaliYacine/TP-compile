@@ -672,17 +672,17 @@ YY_RULE_SETUP
 case 7:
 YY_RULE_SETUP
 #line 21 "lexical.l"
-{rechercher(yytext,"Mot cle",0,0, 1); Col= Col + strlen(yytext); printf (" L entite lexicale reconnue est %s \n", yytext);return mc_if;}
+{yylval.str=strdup(yytext);rechercher(yytext,"Mot cle",0,0, 1); Col= Col + strlen(yytext); printf (" L entite lexicale reconnue est %s \n", yytext);return mc_if;}
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
 #line 22 "lexical.l"
-{rechercher(yytext,"Mot cle",0,0, 1); Col= Col + strlen(yytext); printf (" L entite lexicale reconnue est %s \n", yytext);return mc_then;}
+{yylval.str=strdup(yytext);rechercher(yytext,"Mot cle",0,0, 1); Col= Col + strlen(yytext); printf (" L entite lexicale reconnue est %s \n", yytext);return mc_then;}
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
 #line 23 "lexical.l"
-{rechercher(yytext,"Mot cle",0,0, 1); Col= Col + strlen(yytext); printf (" L entite lexicale reconnue est %s \n", yytext);return mc_endif;}
+{yylval.str=strdup(yytext);rechercher(yytext,"Mot cle",0,0, 1); Col= Col + strlen(yytext); printf (" L entite lexicale reconnue est %s \n", yytext);return mc_endif;}
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
@@ -706,32 +706,32 @@ YY_RULE_SETUP
 case 12:
 YY_RULE_SETUP
 #line 37 "lexical.l"
-{rechercher(yytext,"Mot cle",0,0,2); Col= Col + strlen(yytext);return aff;}
+{yylval.str=strdup(yytext);rechercher(yytext,"Mot cle",0,0,2); Col= Col + strlen(yytext);return aff;}
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
 #line 38 "lexical.l"
-{rechercher(yytext,"Mot cle",0,0,2); Col= Col + strlen(yytext);return pvg;}
+{yylval.str=strdup(yytext);rechercher(yytext,"Mot cle",0,0,2); Col= Col + strlen(yytext);return pvg;}
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
 #line 39 "lexical.l"
-{rechercher(yytext,"Mot cle",0,0,2); Col= Col + strlen(yytext);return lt;}
+{yylval.str=strdup(yytext);rechercher(yytext,"Mot cle",0,0,2); Col= Col + strlen(yytext);return lt;}
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
 #line 40 "lexical.l"
-{rechercher(yytext,"Mot cle",0,0,2); Col= Col + strlen(yytext);return gt;}
+{yylval.str=strdup(yytext);rechercher(yytext,"Mot cle",0,0,2); Col= Col + strlen(yytext);return gt;}
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
 #line 41 "lexical.l"
-{rechercher(yytext,"Mot cle",0,0,2); Col= Col + strlen(yytext);return po;}
+{yylval.str=strdup(yytext);rechercher(yytext,"Mot cle",0,0,2); Col= Col + strlen(yytext);return po;}
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
 #line 42 "lexical.l"
-{rechercher(yytext,"Mot cle",0,0,2); Col= Col + strlen(yytext);return pf;}
+{yylval.str=strdup(yytext);rechercher(yytext,"Mot cle",0,0,2); Col= Col + strlen(yytext);return pf;}
 	YY_BREAK
 case 18:
 YY_RULE_SETUP

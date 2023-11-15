@@ -1363,10 +1363,45 @@ yyreduce:
     { printf(" Le programme est correcte syntaxiquement\n"); YYACCEPT; ;}
     break;
 
+  case 7:
+
+/* Line 1455 of yacc.c  */
+#line 17 "syntaxique.y"
+    { printf("---> %s %s %s %s %s \n",(yyvsp[(1) - (7)].str),(yyvsp[(2) - (7)].str),(yyvsp[(4) - (7)].str),(yyvsp[(5) - (7)].str),(yyvsp[(7) - (7)].str)); ;}
+    break;
+
+  case 8:
+
+/* Line 1455 of yacc.c  */
+#line 17 "syntaxique.y"
+    { printf("---> %s %s %s %s \n",(yyvsp[(1) - (4)].str),(yyvsp[(2) - (4)].str),(yyvsp[(3) - (4)].str),(yyvsp[(4) - (4)].str)); ;}
+    break;
+
+  case 9:
+
+/* Line 1455 of yacc.c  */
+#line 19 "syntaxique.y"
+    { printf("---> %s %s %s \n",(yyvsp[(1) - (3)].str),(yyvsp[(2) - (3)].str),(yyvsp[(3) - (3)].str)); ;}
+    break;
+
+  case 10:
+
+/* Line 1455 of yacc.c  */
+#line 19 "syntaxique.y"
+    { printf("---> %s %s %s \n",(yyvsp[(1) - (3)].str),(yyvsp[(2) - (3)].str),(yyvsp[(3) - (3)].str)); ;}
+    break;
+
+  case 11:
+
+/* Line 1455 of yacc.c  */
+#line 19 "syntaxique.y"
+    { printf("---> %s %s %s \n",(yyvsp[(1) - (4)].str),(yyvsp[(2) - (4)].str),(yyvsp[(3) - (4)].str)); ;}
+    break;
+
 
 
 /* Line 1455 of yacc.c  */
-#line 1370 "syntaxique.tab.c"
+#line 1405 "syntaxique.tab.c"
       default: break;
     }
   YY_SYMBOL_PRINT ("-> $$ =", yyr1[yyn], &yyval, &yyloc);
