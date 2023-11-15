@@ -18,6 +18,10 @@ cst {chiffre}+
 "REAL" {rechercher(yytext,"Mot cle",0,0, 1); Col= Col + strlen(yytext); printf (" L entite lexicale reconnue est %s \n", yytext);return mc_real;}
 "START" {rechercher(yytext,"Mot cle",0,0, 1); Col= Col + strlen(yytext); printf (" L entite lexicale reconnue est %s \n", yytext);return mc_start;}
 "END." {rechercher(yytext,"Mot cle",0,0, 1); Col= Col + strlen(yytext); printf (" L entite lexicale reconnue est %s \n", yytext);return mc_end;}
+"IF" {rechercher(yytext,"Mot cle",0,0, 1); Col= Col + strlen(yytext); printf (" L entite lexicale reconnue est %s \n", yytext);return mc_if;}
+"THEN" {rechercher(yytext,"Mot cle",0,0, 1); Col= Col + strlen(yytext); printf (" L entite lexicale reconnue est %s \n", yytext);return mc_then;}
+"ENDIF" {rechercher(yytext,"Mot cle",0,0, 1); Col= Col + strlen(yytext); printf (" L entite lexicale reconnue est %s \n", yytext);return mc_endif;}
+
 
 {idf} {yylval.str=strdup(yytext);
 			  rechercher(yytext,"IDF"," ",0,0);  
@@ -32,6 +36,10 @@ cst {chiffre}+
 			  return cst;}
 "=" {rechercher(yytext,"Mot cle",0,0,2); Col= Col + strlen(yytext);return aff;}
 ";" {rechercher(yytext,"Mot cle",0,0,2); Col= Col + strlen(yytext);return pvg;}
+"<" {rechercher(yytext,"Mot cle",0,0,2); Col= Col + strlen(yytext);return lt;}
+">" {rechercher(yytext,"Mot cle",0,0,2); Col= Col + strlen(yytext);return gt;}
+"(" {rechercher(yytext,"Mot cle",0,0,2); Col= Col + strlen(yytext);return po;}
+")" {rechercher(yytext,"Mot cle",0,0,2); Col= Col + strlen(yytext);return pf;}
 
 [ \t]   Col= Col + strlen(yytext);
 \n {Col= 1; nb_ligne++;}

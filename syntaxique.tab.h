@@ -49,7 +49,14 @@
      mc_real = 265,
      mc_start = 266,
      mc_end = 267,
-     err = 268
+     mc_if = 268,
+     mc_then = 269,
+     mc_endif = 270,
+     lt = 271,
+     gt = 272,
+     po = 273,
+     pf = 274,
+     err = 275
    };
 #endif
 
@@ -69,7 +76,7 @@ typedef union YYSTYPE
 
 
 /* Line 1676 of yacc.c  */
-#line 73 "syntaxique.tab.h"
+#line 80 "syntaxique.tab.h"
 } YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */
